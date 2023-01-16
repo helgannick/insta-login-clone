@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import '../LoginPage/LoginPage.css'
-import Grid from '@material-ui/core/Grid';
-import inst_image from '../../images/9364675fb26a.svg';
+import insta_image from '../../images/cel-insta.png';
 import insta_logo from '../../images/logoinsta.png';
-import fb from '../../images/fb.png';
-import appstore from '../../images/app.png';
-import playstore from '../../images/play.png';
+import slider_1 from '../../images/slider-1.png';
+import slider_2 from '../../images/slider-2.png';
+import slider_3 from '../../images/slider-3.png';
+import slider_4 from '../../images/slider-4.png';
+import appstore from '../../images/microsoft.png';
+import playstore from '../../images/playstore.png';
+
+
 
 
 class LoginPage extends Component {
@@ -17,59 +21,98 @@ class LoginPage extends Component {
 
     render() { 
         return ( 
-            <div>
-                <Grid container>
-                    <Grid item xs={3}>
-                    </Grid>
-                    <Grid item xs={6}>
-                       <div className="loginpage__main">
-                           <div>
-                               <img className='inst_image' src={inst_image} width="454px" />
-                           </div>
-                           <div>
-                               <div className="loginpage_rightcomponent">
-                                   <img className="loginpage__logo" src={insta_logo} />
-                                   <div className="loginPage__signin">
-
-
-                                   <div>
-                                    <input className="logipage__text"  type="text" placeholder="Phone number, username, or email" />
-                                    <input className="logipage__text"   type="password" placeholder="Password" />
-                                    <button className="login__button">Log In</button>
-                                    </div> 
-                        
-
-                                        <div className="login__ordiv">
-                                            <div className="login__dividor"></div>
-                                            <div className="login__or">OR</div>
-                                            <div className="login__dividor"></div>
-                                        </div>
-
-                                        <div className="login__fb">
-                                            <img src={fb} width="15px" style={{ "marginRight":"5px" }} />Log in with Facebook
-                                        </div>
-                                        <div className="login_forgt"> Forgot password?</div>
-                                   </div>
-                               </div>
-                                   
-                                <div className="loginPage__downloadSection">
-                                    <div>
-                                    Get the app.
-                                    </div>
-                                    <div className="loginPage__option">
-                                        <img className="loginPage_dwimg" src={appstore} width="136px" />
-                                        <img className="loginPage_dwimg" src={playstore} width="136px" />
-                                    </div>
+           <div className='container'> 
+                <div className='insta-login-area'>
+                    <div className='insta-device-section'>
+                        <img src={insta_image} alt='imagem instagram celular'/>
+                        <div className='slider'>
+                         <img src={slider_1} alt=''/>
+                        </div>
+                    </div>
+                    <div className='insta-login-section'>
+                        <div className='login-container'>
+                            <img className='img-logo' src={insta_logo} alt='logo instagram'/>
+                            <div className='insta-login-form'>
+                                <div className='insta-input-field'>
+                                    <label for=''></label>
+                                    <input type='text' placeholder='Phone number, username or email'/>
                                 </div>
+                            <div className='insta-input-field'>
+                                <label for=''></label>
+                                <input type='password' placeholder='password'/>
+                            </div>
 
-                           </div>
-                       </div>
-                    </Grid>
-                    <Grid item xs={3}>
-                    </Grid>
-                </Grid>
+                            <button className='insta-login-button'>Log in</button>
+
+                        </div>
+
+                        <div className='login-divider'>
+                            <span className='left-divider'></span>
+                            <span className='divider-text'>OR</span>
+                            <span className='right-divider'></span>
+                        </div>
+
+                        <div className='login-social'>
+                            <a href=''><i class='bx bxl-facebook-square'></i>Login with Facebook</a>
+                        </div>
+
+                        <div className='insta-forget-password'>
+                            <a href='#'>Forget password?</a>
+                        </div>
+                    </div>
+                    
+
+                    <div className='insta-signup'>
+                        <p>Don't have an account? <a href='#'>Sign up</a></p>
+                    </div>
+
+                    <div className='insta-get-app'>
+                        <p>Get the app</p>
+
+                        <div className='insta-get-app-store'>
+                        <a href='#'><img src={playstore} alt='logo appstore'/></a>
+                        <a href='#'><img src={appstore} alt='logo Google Playstore'/></a>
+                    </div>
+                    </div>
+                </div>
+
             </div>
-         );
+
+                <div className='insta-footer'>
+                    <div className='insta-footer-links-1'>
+                        <a href=''>Meta</a>
+                        <a href='#'>About</a>
+                        <a href='#'>Blog</a>
+                        <a href='#'>Jobs</a>
+                        <a href='#'>Help</a>
+                        <a href='#'>API</a>
+                        <a href='#'>Privacy</a>
+                        <a href='#'>Terms</a>
+                        <a href='#'>Top accounts</a>
+                        <a href='#'>Hashtag</a>
+                        <a href='#'>Locations</a>
+                        <a href='#'>Instagram Lite</a>
+                        <a href='#'>Contact uploading & Non-users</a>
+                    </div>
+
+                    <div className='insta-footer-links-2'>
+                        <select name='' id=''>
+                            <option value=''>English</option>
+                            <option value=''>Spanish</option>
+                            <option value=''>Português Brasil</option>
+
+
+                        </select>
+                        <p>&#169; 2023 Instagram Clone by Marcos Barbosa</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+           
+        );
     }
 }
  
